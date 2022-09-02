@@ -1,0 +1,10 @@
+/* contient les fichiers qui definissent es fondations de votre site, 
+par exemple la police de caractere et les normes que vous voulez appliquer 
+sur tout votre site, telles que le box-sizing*/
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
