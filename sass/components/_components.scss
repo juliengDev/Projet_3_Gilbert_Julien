@@ -1,2 +1,11 @@
 /* utilise pour ranger les blocs BEM qui sont independants, comme les boutons*/
 
+.header__locate {
+  background-color: rgba(223, 219, 22, 0.493);
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+    &__icon {margin: 0 10px}
+    &__city {font-size: $font-text;}
+}

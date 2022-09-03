@@ -1,2 +1,14 @@
 /* dossier contenant ce qui est reutilisable, par exemplle un header pour 
 les mises en page de grande taille ou un footer*/
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 65px;
+    background-color: white;   
+        &__logo {      
+            width: 50%;     
+      }
+   }

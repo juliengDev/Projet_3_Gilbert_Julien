@@ -7,8 +7,39 @@ sur tout votre site, telles que le box-sizing*/
   padding: 0;
 }
 
-/* utilise pour ranger les blocs BEM qui sont independants, comme les boutons*/ /* dossier contenant ce qui est reutilisable, par exemplle un header pour 
+body {
+  width: 375px;
+  background-color: #333;
+}
+
+/* utilise pour ranger les blocs BEM qui sont independants, comme les boutons*/
+.header__locate {
+  background-color: rgba(223, 219, 22, 0.493);
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__locate__icon {
+  margin: 0 10px;
+}
+.header__locate__city {
+  font-size: "Roboto", sans-serif;
+}
+
+/* dossier contenant ce qui est reutilisable, par exemplle un header pour 
 les mises en page de grande taille ou un footer*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  background-color: white;
+}
+.header__logo {
+  width: 50%;
+}
+
 /* contient les blocs de code qui ne s'applique qu'a une seule page
 contient des regles specifiques utiliser sur une seule page et pas ailleurs*/
 
