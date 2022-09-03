@@ -1,0 +1,11 @@
+@mixin font-xl {
+  font-family: $font-text;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+@mixin font-normal {
+  font-family: $font-text;
+  font-size: 1.1rem;
+  font-weight: 300;
+}

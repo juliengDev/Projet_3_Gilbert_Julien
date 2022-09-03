@@ -1,11 +1,29 @@
 /* utilise pour ranger les blocs BEM qui sont independants, comme les boutons*/
 
-.header__locate {
-  background-color: rgba(223, 219, 22, 0.493);
+.header__locate {  
   height: 65px;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center; 
+  background-color: $color-bg;
+  box-shadow: 0 1 red;
     &__icon {margin: 0 10px}
-    &__city {font-size: $font-text;}
+    &__city {font-family: $font-text;}
+}
+
+.reservation {
+  background-color: white;
+  height:285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-text;
+    &__title {
+      @include font-xl; margin-top: 50px;
+    & p:nth-child(2){text-align: center;}
+  }    
+    &__description {
+      @include font-normal;margin-top: 10px;
+      & p:nth-child(2) {text-align:center;}
+    }
 }
