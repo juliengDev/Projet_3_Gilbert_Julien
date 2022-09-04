@@ -19,7 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
-  box-shadow: 0 1 red;
+  border-top: 5px solid #f6f6f6;
+  border-image: linear-gradient(hsl(0deg, 0%, 56%), hsl(0deg, 0%, 96%)) 1 stretch;
 }
 .header__locate__icon {
   margin: 0 10px;
