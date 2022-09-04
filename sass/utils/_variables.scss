@@ -3,6 +3,7 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-bg: #f6f6f6;
+$border-shadow: linear-gradient(rgba(0, 0, 0, 0.121), rgb(246, 246, 246)) 80;
 
 /*  Fonts */
 $font-title: 'Shrikhand', cursive;
@@ -10,6 +11,7 @@ $font-logo: 'Shrikhand', cursive;
 $font-text: 'Roboto', sans-serif;
  
 /* Button */
-$cd-btn-start: rgba(147, 86, 220, 0.8);
-$cd-btn-stop: rgba(147, 86, 220, 1);
-$cd-btn: #9356DC;
+$cd-btn-start: linear-gradient(to top, $color-primary  0%, $color-secondary  100%);
+$cd-btn-stop: linear-gradient(to top, $color-primary  0%, $color-secondary  100%);
+$cd-btn-color: #fff;
+$cd-btn-shadow: 4px 4px 5px rgba(0, 0, 0, 0.150);

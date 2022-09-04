@@ -60,19 +60,23 @@ body {
 }
 
 .btn {
-  background-color: rgba(147, 86, 220, 0.8);
-  border: 2px solid #9356DC;
+  width: 220px;
+  height: 60px;
+  margin-top: 30px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+  color: #fff;
   border-radius: 10rem;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+  border: none;
   cursor: pointer;
-  font-size: 3rem;
-  overflow: hidden;
-  padding: 1.85rem 3rem;
-  position: relative;
   transition: all 400ms;
 }
 .btn:hover {
-  transform: scale(1.2);
-  background-color: rgb(147, 86, 220);
+  transform: scale(1.1);
+  background-color: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
 }
 
 /* dossier contenant ce qui est reutilisable, par exemple un header pour 

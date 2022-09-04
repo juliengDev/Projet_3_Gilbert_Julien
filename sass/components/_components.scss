@@ -7,8 +7,8 @@
   align-items: center; 
   background-color: $color-bg;
   border-top: 8px solid $color-bg;
-  border-image: linear-gradient(rgba(0, 0, 0, 0.121), rgb(246, 246, 246)) 80;
-    &__icon {margin: 0 10px}
+  border-image: $border-shadow;
+    &__icon {margin: 0 10px;}
     &__city {font-family: $font-text;}
 }
 
@@ -20,27 +20,22 @@
   align-items: center;
   font-family: $font-text;
     &__title {
-      @include font-xl; margin-top: 50px;
+      @include font-xl; 
+      margin-top: 50px;
     & p:nth-child(2){text-align: center;}
   }    
     &__description {
-      @include font-normal;margin-top: 10px;
+      @include font-normal;
+      margin-top: 10px;
       & p:nth-child(2) {text-align:center;}
     }
 }
-
+     
   .btn {
-  background-color: $cd-btn-start;
-  border: 2px solid $cd-btn;
-  border-radius: 10rem;
-  cursor: pointer;
-  font-size: 3rem;
-  overflow: hidden;
-  padding: 1.85rem 3rem;
-  position: relative;
-  transition: all 400ms;
+    @include button;
     &:hover { 
-      transform: scale(1.20);
+      transform: scale(1.10);
       background-color: $cd-btn-stop;
-    }
-  }
+    }  
+}
+
