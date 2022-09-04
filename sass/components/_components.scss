@@ -6,24 +6,56 @@
   justify-content: center;
   align-items: center; 
   background-color: $color-bg;
-  box-shadow: 0 1 red;
-    &__icon {margin: 0 10px}
+  border-top: 8px solid $color-bg;
+  border-image: $border-shadow;
+    &__icon {margin: 0 10px;}
     &__city {font-family: $font-text;}
 }
 
 .reservation {
-  background-color: white;
+  background-color: #fff;
   height:285px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: $font-text;
     &__title {
-      @include font-xl; margin-top: 50px;
+      @include font-xl; 
+      margin-top: 50px;
     & p:nth-child(2){text-align: center;}
   }    
     &__description {
-      @include font-normal;margin-top: 10px;
+      @include font-normal;
+      margin-top: 10px;
       & p:nth-child(2) {text-align:center;}
     }
 }
+     
+  .btn {
+    @include button;
+      &:hover { 
+            transform: scale(1.1);                       
+    }  
+}
+
+.operation {
+  /*border: 2px solid blue;*/
+  height: 445px;
+  background-color: #fff;
+    &__title {
+      @include font-xl;
+      padding: 40px 30px;
+    }
+    &__container {      
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+    &__bloc {     
+      display: flex;      
+      align-items: center;
+      height: 75px;
+      background-color: $color-bg;
+      margin: 10px;
+    }
+  }

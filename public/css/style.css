@@ -1,3 +1,17 @@
+/* Colors */
+/*  Fonts */
+/* Button */
+/*
+
+@mixin btn-bg-lighten {
+  background-color: lighten($cd-btn-bg, 50%);
+}
+
+@mixin btn-shadow-darken {
+  box-shadow: darken($cd-btn-shadow, 50%);
+}
+
+*/
 /* contient les fichiers qui definissent es fondations de votre site, 
 par exemple la police de caractere et les normes que vous voulez appliquer 
 sur tout votre site, telles que le box-sizing*/
@@ -19,7 +33,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
-  box-shadow: 0 1 red;
+  border-top: 8px solid #f6f6f6;
+  border-image: linear-gradient(rgba(0, 0, 0, 0.121), rgb(246, 246, 246)) 80;
 }
 .header__locate__icon {
   margin: 0 10px;
@@ -29,7 +44,7 @@ body {
 }
 
 .reservation {
-  background-color: white;
+  background-color: #fff;
   height: 285px;
   display: flex;
   flex-direction: column;
@@ -53,6 +68,49 @@ body {
 }
 .reservation__description p:nth-child(2) {
   text-align: center;
+}
+
+.btn {
+  width: 220px;
+  height: 60px;
+  margin-top: 30px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-image: linear-gradient(to top, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  color: #fff;
+  border-radius: 10rem;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
+  transition: all 200ms;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.operation {
+  /*border: 2px solid blue;*/
+  height: 445px;
+  background-color: #fff;
+}
+.operation__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 40px 30px;
+}
+.operation__container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.operation__bloc {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  background-color: #f6f6f6;
+  margin: 10px;
 }
 
 /* dossier contenant ce qui est reutilisable, par exemple un header pour 
