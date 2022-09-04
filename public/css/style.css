@@ -1,3 +1,6 @@
+/* Colors */
+/*  Fonts */
+/* Button */
 /* contient les fichiers qui definissent es fondations de votre site, 
 par exemple la police de caractere et les normes que vous voulez appliquer 
 sur tout votre site, telles que le box-sizing*/
@@ -19,8 +22,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
-  border-top: 5px solid #f6f6f6;
-  border-image: linear-gradient(hsl(0deg, 0%, 56%), hsl(0deg, 0%, 96%)) 1 stretch;
+  border-top: 8px solid #f6f6f6;
+  border-image: linear-gradient(rgba(0, 0, 0, 0.121), rgb(246, 246, 246)) 80;
 }
 .header__locate__icon {
   margin: 0 10px;
@@ -54,6 +57,22 @@ body {
 }
 .reservation__description p:nth-child(2) {
   text-align: center;
+}
+
+.btn {
+  background-color: rgba(147, 86, 220, 0.8);
+  border: 2px solid #9356DC;
+  border-radius: 10rem;
+  cursor: pointer;
+  font-size: 3rem;
+  overflow: hidden;
+  padding: 1.85rem 3rem;
+  position: relative;
+  transition: all 400ms;
+}
+.btn:hover {
+  transform: scale(1.2);
+  background-color: rgb(147, 86, 220);
 }
 
 /* dossier contenant ce qui est reutilisable, par exemple un header pour 
