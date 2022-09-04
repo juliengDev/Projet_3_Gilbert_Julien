@@ -1,6 +1,17 @@
 /* Colors */
 /*  Fonts */
 /* Button */
+/*
+
+@mixin btn-bg-lighten {
+  background-color: lighten($cd-btn-bg, 50%);
+}
+
+@mixin btn-shadow-darken {
+  box-shadow: darken($cd-btn-shadow, 50%);
+}
+
+*/
 /* contient les fichiers qui definissent es fondations de votre site, 
 par exemple la police de caractere et les normes que vous voulez appliquer 
 sur tout votre site, telles que le box-sizing*/
@@ -33,7 +44,7 @@ body {
 }
 
 .reservation {
-  background-color: white;
+  background-color: #fff;
   height: 285px;
   display: flex;
   flex-direction: column;
@@ -66,17 +77,40 @@ body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  background-image: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+  background-image: linear-gradient(to top, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   color: #fff;
   border-radius: 10rem;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
   border: none;
   cursor: pointer;
-  transition: all 400ms;
+  transition: all 200ms;
 }
 .btn:hover {
   transform: scale(1.1);
-  background-color: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
+}
+
+.operation {
+  /*border: 2px solid blue;*/
+  height: 445px;
+  background-color: #fff;
+}
+.operation__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 40px 30px;
+}
+.operation__container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.operation__bloc {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  background-color: #f6f6f6;
+  margin: 10px;
 }
 
 /* dossier contenant ce qui est reutilisable, par exemple un header pour 

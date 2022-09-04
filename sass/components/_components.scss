@@ -13,7 +13,7 @@
 }
 
 .reservation {
-  background-color: white;
+  background-color: #fff;
   height:285px;
   display: flex;
   flex-direction: column;
@@ -33,9 +33,29 @@
      
   .btn {
     @include button;
-    &:hover { 
-      transform: scale(1.10);
-      background-color: $cd-btn-stop;
+      &:hover { 
+            transform: scale(1.1);                       
     }  
 }
 
+.operation {
+  /*border: 2px solid blue;*/
+  height: 445px;
+  background-color: #fff;
+    &__title {
+      @include font-xl;
+      padding: 40px 30px;
+    }
+    &__container {      
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+    &__bloc {     
+      display: flex;      
+      align-items: center;
+      height: 75px;
+      background-color: $color-bg;
+      margin: 10px;
+    }
+  }

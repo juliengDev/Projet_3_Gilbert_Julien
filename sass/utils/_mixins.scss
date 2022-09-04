@@ -16,11 +16,11 @@
   font-size: 1rem;
   font-family: $font-text;
   text-align: center;
-  background-image: $cd-btn-start;
+  background-image: $cd-btn-bg;
   color: $cd-btn-color;  
   border-radius: 10rem;
   box-shadow: $cd-btn-shadow;
   border: none;
   cursor: pointer;   
-  transition: all 400ms;
+  transition: all 200ms;
 }
