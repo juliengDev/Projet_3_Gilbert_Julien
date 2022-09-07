@@ -33,10 +33,16 @@
      
   .btn {
     @include button;
-      &:hover { 
-            transform: scale(1.1);                       
-    }  
-}
+      &:hover {
+        &::after {
+          opacity: 0.2;
+                    
+        }
+      }
+      &::after {
+        @include button--after;               
+      }            
+    }
 
 .operation {
   /*border: 2px solid blue;*/
@@ -45,6 +51,7 @@
     &__title {
       @include font-xl;
       padding: 40px 30px;
+      
     }
     &__container {      
       display: flex;
