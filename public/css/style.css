@@ -160,6 +160,17 @@ body {
   height: 1225px;
   background-color: #EAEAEA;
 }
+.restaurant__cards {
+  display: grid;
+  grid-template: repeat(4, 1fr)/1fr;
+  grid-auto-flow: column;
+}
+.restaurant > p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 30px 30px;
+}
 
 /* dossier contenant ce qui est reutilisable, par exemple un header pour 
 les mises en page de grande taille ou un footer*/
@@ -172,6 +183,49 @@ les mises en page de grande taille ou un footer*/
 }
 .header__logo {
   width: 50%;
+}
+
+.card {
+  height: 265px;
+  position: relative;
+  margin: 10px;
+}
+.card__image {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.card__button {
+  background-color: #99E2D0;
+  color: #028766;
+  border: #99E2D0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 2;
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  top: 10px;
+  right: 10px;
+}
+.card .card-footer {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 2;
+  bottom: 15px;
+  width: 100%;
+}
+.card .card-text {
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
 }
 
 /* contient les blocs de code qui ne s'applique qu'a une seule page

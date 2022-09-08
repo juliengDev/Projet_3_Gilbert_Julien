@@ -13,6 +13,48 @@ les mises en page de grande taille ou un footer*/
       }
    }
 
-   .restaurant__cards {
+.card {
+    height: 265px;
+    position: relative;
+    margin: 10px;
     
-   }
+      &__image {
+        position: absolute;
+        height: 200px;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+       
+        
+      }
+      &__button {
+        background-color: #99E2D0;
+        color: #028766;
+        border: #99E2D0;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 2;
+        padding: 10px 25px;
+        font-family: $font-text;
+        font-weight: 500;
+        font-size: 1em;        
+        top: 10px;
+        right: 10px;
+        }
+        .card-footer {
+            display: flex;
+            flex-direction: column;
+            height: 100px;
+            background-color: #fff;
+            position: absolute;
+            z-index:  2;
+            bottom: 15px;
+            width: 100%;
+        }
+        .card-text {            
+            height:  100px;
+            width: 100%;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0px;
+        }   
+  }
