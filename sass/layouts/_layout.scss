@@ -14,47 +14,34 @@ les mises en page de grande taille ou un footer*/
    }
 
 .card {
-    height: 265px;
-    position: relative;
-    margin: 10px;
-    
+    width: 335px;    
+    margin: 0px auto;
+    background-color: #fff;
+    box-shadow: $cd-btn-shadow;
+    border-radius: 15px;
+    overflow: hidden;
+      & a {text-decoration:none;color: #333;}    
       &__image {
-        position: absolute;
-        height: 200px;
-        width: 100%;
-        border-radius: 15px 15px 0 0;
-       
-        
+        position: relative;                
+        height: 200px;      
+         img {
+          width: 105%;
+          position:absolute;          
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+         }              
       }
-      &__button {
-        background-color: #99E2D0;
-        color: #028766;
-        border: #99E2D0;
-        border-radius: 5px;
-        position: absolute;
-        z-index: 2;
-        padding: 10px 25px;
-        font-family: $font-text;
-        font-weight: 500;
-        font-size: 1em;        
-        top: 10px;
-        right: 10px;
-        }
-        .card-footer {
+      &__button {@include card-button;}
+        .card-body  {
+            margin: -25px auto 0;
+            padding: 10px;
             display: flex;
-            flex-direction: column;
-            height: 100px;
-            background-color: #fff;
-            position: absolute;
-            z-index:  2;
-            bottom: 15px;
-            width: 100%;
-        }
-        .card-text {            
-            height:  100px;
-            width: 100%;
-            background-color: #fff;
-            position: absolute;
-            bottom: 0px;
-        }   
-  }
+            justify-content: space-between;          
+          }
+         .card-text {display: flex; flex-direction: column;justify-content: center;} 
+        &__title {@include font-card-title--bold;}
+        &__location {@include font-card-description;margin-top:5px;}
+        &__icon {margin: 20px 10px;}
+          
+      }
