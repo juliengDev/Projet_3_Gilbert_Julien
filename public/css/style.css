@@ -186,14 +186,23 @@ body {
 
 /* dossier contenant ce qui est reutilisable, par exemple un header pour 
 les mises en page de grande taille ou un footer*/
-.header_page {
+/* Main page */
+.header-page {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 75px;
   background-color: white;
 }
-.header_page__logo {
+.header-page__icon {
+  position: absolute;
+  left: 30px;
+  top: 25px;
+  font-size: 1.4em;
+  color: #000;
+}
+.header-page__logo {
   width: 50%;
 }
 
@@ -293,6 +302,78 @@ les mises en page de grande taille ou un footer*/
 .footer__bloc li {
   margin-left: 5px;
   font-weight: 400;
+}
+
+/* Restaurant Page*/
+.image-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.image-container img {
+  width: 100%;
+}
+
+.restaurant-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 200px;
+  font-family: "Shrikhand", cursive;
+  padding: 0 30px;
+  border-radius: 25px 25px 0 0;
+}
+
+.starter-container {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  background-color: #f6f6f6;
+  padding: 0 30px;
+  border: 2px solid red;
+}
+
+.menu-title h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.menu-title h2::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-top: 2px;
+  background-color: #99E2D0;
+}
+
+.dishes-card {
+  height: 60px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+.dishes-card__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin: 10px 0 0 10px;
+}
+.dishes-card-bloc {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 15px 5px 10px;
+}
+.dishes-card-bloc__description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
 /* contient les blocs de code qui ne s'applique qu'a une seule page

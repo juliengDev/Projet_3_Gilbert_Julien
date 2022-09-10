@@ -18,6 +18,13 @@
   font-family: $font-text;
   font-weight: 300;
 }
+@mixin font-menu-title {
+  font-family: $font-text;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.8rem; 
+  
+}
 
 @mixin button {
   width: 250px;
