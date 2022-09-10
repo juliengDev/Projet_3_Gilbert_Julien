@@ -30,18 +30,49 @@ les mises en page de grande taille ou un footer*/
           top: 30%;
           left: 50%;
           transform: translate(-50%, -50%);
-         }              
-      }
+        }              
+       }
       &__button {@include card-button;}
         .card-body  {
+            height: 80px;
             margin: -25px auto 0;
             padding: 10px;
             display: flex;
             justify-content: space-between;          
           }
-         .card-text {display: flex; flex-direction: column;justify-content: center;} 
-        &__title {@include font-card-title--bold;}
-        &__location {@include font-card-description;margin-top:5px;}
-        &__icon {margin: 20px 10px;}
-          
+         .card-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        } 
+      &__title {@include font-card-title--bold;}
+      &__location {@include font-card-description;margin-top:3px;}
+      &__icon {margin: 20px 10px;}
+    }
+
+    .footer {
+      width: 100%;
+      height: 150px;
+      background-color: #363636;
+      padding: 30px;
+      font-family: $font-text;
+      color: #fff;
+        &__logo  {
+          filter: invert(96%) sepia(0%) saturate(7468%) hue-rotate(120deg) brightness(104%) contrast(98%);
+          width: 30%;                
+        }
+        ul {margin-top: 15px;display: flex; flex-direction: column; justify-content: center;}
+        li {list-style-type: none;font-size: 0.9rem;margin: 5px 0;}         
+        &__bloc {          
+          display: flex;
+          align-items: center;
+          .margin {margin-left: 4px;}
+          li {margin-left: 5px;}                
       }
+    }
+       
+      
+        
+        
+        
+    
