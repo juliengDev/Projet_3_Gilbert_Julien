@@ -1,4 +1,14 @@
 /* utilise pour ranger les blocs BEM qui sont independants, comme les boutons*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  height: 75px;
+  background-color: white;   
+      &__logo {      
+          width: 50%;     
+    }
+ }
 
 .header__locate {  
   height: 55px;

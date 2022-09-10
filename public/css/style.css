@@ -17,6 +17,17 @@ body {
 }
 
 /* utilise pour ranger les blocs BEM qui sont independants, comme les boutons*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  background-color: white;
+}
+.header__logo {
+  width: 50%;
+}
+
 .header__locate {
   height: 55px;
   display: flex;
@@ -175,14 +186,14 @@ body {
 
 /* dossier contenant ce qui est reutilisable, par exemple un header pour 
 les mises en page de grande taille ou un footer*/
-.header {
+.header_page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 75px;
   background-color: white;
 }
-.header__logo {
+.header_page__logo {
   width: 50%;
 }
 
@@ -249,7 +260,7 @@ les mises en page de grande taille ou un footer*/
 
 .footer {
   width: 100%;
-  height: 150px;
+  height: 210px;
   background-color: #363636;
   padding: 30px;
   font-family: "Roboto", sans-serif;
@@ -269,16 +280,19 @@ les mises en page de grande taille ou un footer*/
   list-style-type: none;
   font-size: 0.9rem;
   margin: 5px 0;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 .footer__bloc {
   display: flex;
   align-items: center;
 }
 .footer__bloc .margin {
-  margin-left: 4px;
+  margin-left: 5px;
 }
 .footer__bloc li {
   margin-left: 5px;
+  font-weight: 400;
 }
 
 /* contient les blocs de code qui ne s'applique qu'a une seule page
