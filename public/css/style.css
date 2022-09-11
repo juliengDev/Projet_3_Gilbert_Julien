@@ -374,6 +374,9 @@ les mises en page de grande taille ou un footer*/
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
   margin: 10px 0;
 }
+.dishes-card--extend {
+  height: 80px;
+}
 .dishes-card__title {
   font-family: "Roboto", sans-serif;
   font-weight: 600;

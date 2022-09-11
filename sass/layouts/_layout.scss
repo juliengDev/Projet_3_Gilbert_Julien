@@ -128,6 +128,7 @@ les mises en page de grande taille ou un footer*/
     border-radius: 15px;
     box-shadow: $cd-btn-shadow;
     margin: 10px 0;
+      &--extend {height: 80px;}
       &__title {@include font-card-title--bold;margin: 10px 0 0 10px;}
       &-bloc {display:flex; justify-content: space-between;margin: 5px 15px 5px 10px;
         &__description {
