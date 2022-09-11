@@ -184,6 +184,18 @@ body {
   padding: 30px 30px;
 }
 
+.btn-container {
+  width: 100%;
+  height: 150px;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+}
+.btn-container .btn {
+  width: 55%;
+  margin-top: 0;
+}
+
 /* dossier contenant ce qui est reutilisable, par exemple un header pour 
 les mises en page de grande taille ou un footer*/
 /* Main page */
@@ -309,6 +321,7 @@ les mises en page de grande taille ou un footer*/
   width: 100%;
   height: 300px;
   position: relative;
+  overflow: hidden;
 }
 .image-container img {
   width: 100%;
@@ -334,23 +347,24 @@ les mises en page de grande taille ou un footer*/
   height: 300px;
   background-color: #f6f6f6;
   padding: 0 30px;
-  border: 2px solid red;
 }
-
-.menu-title h2 {
+.starter-container .menu-title h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
-
-.menu-title h2::after {
+.starter-container .menu-title h2::after {
   content: "";
   display: block;
   width: 30px;
   height: 2px;
   margin-top: 2px;
   background-color: #99E2D0;
+}
+
+.starter-container--extend {
+  height: 370px;
 }
 
 .dishes-card {
@@ -373,6 +387,14 @@ les mises en page de grande taille ou un footer*/
 .dishes-card-bloc__description {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  font-size: 0.9rem;
+}
+.dishes-card-bloc__description--bold {
+  font-weight: 400;
+}
+.dishes-card-bloc__price {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
   font-size: 0.9rem;
 }
 

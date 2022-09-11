@@ -85,7 +85,8 @@ les mises en page de grande taille ou un footer*/
     .image-container {
       width: 100%;
       height:300px;
-      position: relative;  
+      position: relative;
+      overflow: hidden;  
         img {width: 100%;}
     }
     
@@ -107,10 +108,9 @@ les mises en page de grande taille ou un footer*/
       flex-direction: column;
       height: 300px; 
       background-color: $color-bg;
-      padding: 0 30px;
-      border: 2px solid red}
-    .menu-title h2 {@include font-menu-title;}
-    .menu-title h2::after {
+      padding: 0 30px;      
+      & .menu-title h2 {@include font-menu-title;}
+      & .menu-title h2::after {
       content: "";      
       display: block;
       width: 30px;
@@ -118,6 +118,8 @@ les mises en page de grande taille ou un footer*/
       margin-top: 2px;
       background-color: $color-tertiary; 
   }
+}
+    .starter-container--extend {height:370px;}
       
         
   .dishes-card {    
@@ -128,9 +130,13 @@ les mises en page de grande taille ou un footer*/
     margin: 10px 0;
       &__title {@include font-card-title--bold;margin: 10px 0 0 10px;}
       &-bloc {display:flex; justify-content: space-between;margin: 5px 15px 5px 10px;
-        &__description {@include font-card-description;font-size: 0.9rem}
+        &__description {
+          @include font-card-description;font-size: 0.9rem; 
+          &--bold {font-weight: 400;}
+        }
+        &__price {@include font-menu-price;}
       }
-
-  }      
+    }
+        
         
     
