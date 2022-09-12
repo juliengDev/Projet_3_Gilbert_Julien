@@ -80,7 +80,7 @@ body {
   text-align: center;
   background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   color: #fff;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
   border-radius: 10rem;
   border: none;
   cursor: pointer;
@@ -89,6 +89,9 @@ body {
   z-index: 1;
   overflow: hidden;
   opacity: 1;
+}
+.btn:hover {
+  box-shadow: 5px 5px 15px #666666;
 }
 .btn:hover::after {
   opacity: 0.2;
@@ -101,7 +104,6 @@ body {
   text-align: center;
   background: linear-gradient(to top, white 0%, white 100%);
   color: #fff;
-  box-shadow: 4px 4px 5px black;
   border-radius: 10rem;
   border: none;
   cursor: pointer;
@@ -133,7 +135,10 @@ body {
   padding: 20px;
 }
 .operation .operation__bloc--light {
-  background: #e4d5f6;
+  background: #f2eafb;
+}
+.operation .operation__bloc--light i {
+  color: #9356DC;
 }
 .operation__bloc {
   position: relative;
@@ -141,7 +146,7 @@ body {
   align-items: center;
   height: 75px;
   background-color: #f6f6f6;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   margin: 0.625rem;
 }
@@ -219,11 +224,13 @@ les mises en page de grande taille ou un footer*/
 }
 
 .card {
-  width: 335px;
-  margin: 0px auto;
+  min-width: 335px;
+  height: 255px;
+  margin: 0 auto;
   background-color: #fff;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
+  position: relative;
   overflow: hidden;
 }
 .card a {
@@ -231,15 +238,19 @@ les mises en page de grande taille ou un footer*/
   color: #333;
 }
 .card__image {
+  height: 175px;
   position: relative;
-  height: 200px;
 }
 .card__image img {
-  width: 105%;
+  width: 100%;
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.card__image--position1 {
+  top: -50px;
+}
+.card__image--position2 {
+  top: -150px;
 }
 .card__button {
   background-color: #99E2D0;
@@ -255,16 +266,18 @@ les mises en page de grande taille ou un footer*/
   position: absolute;
 }
 .card .card-body {
+  position: absolute;
+  width: 100%;
   height: 80px;
-  margin: -25px auto 0;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
 }
 .card .card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px 20px;
 }
 .card__title {
   font-family: "Roboto", sans-serif;
@@ -276,7 +289,7 @@ les mises en page de grande taille ou un footer*/
   margin-top: 3px;
 }
 .card__icon {
-  margin: 20px 10px;
+  margin: 30px 20px 0 0;
 }
 
 .footer {
@@ -325,6 +338,10 @@ les mises en page de grande taille ou un footer*/
 }
 .image-container img {
   width: 100%;
+  position: absolute;
+}
+.image-container .card__image--position2 {
+  top: -95px;
 }
 
 .restaurant-title {
@@ -339,6 +356,11 @@ les mises en page de grande taille ou un footer*/
   font-family: "Shrikhand", cursive;
   padding: 0 30px;
   border-radius: 25px 25px 0 0;
+}
+.restaurant-title i {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .starter-container {
@@ -371,7 +393,7 @@ les mises en page de grande taille ou un footer*/
   height: 60px;
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
   margin: 10px 0;
 }
 .dishes-card--extend {

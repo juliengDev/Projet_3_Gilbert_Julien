@@ -23,42 +23,49 @@ les mises en page de grande taille ou un footer*/
     }
 
 .card {
-    width: 335px;    
-    margin: 0px auto;
+    min-width: 335px;
+    height: 255px;    
+    margin: 0 auto;
     background-color: #fff;
     box-shadow: $cd-btn-shadow;
     border-radius: 15px;
-    overflow: hidden;
+    position: relative;
+    overflow: hidden;    
+    
       & a {text-decoration:none;color: #333;}    
-      &__image {
-        position: relative;                
-        height: 200px;      
-         img {
-          width: 105%;
-          position:absolute;          
-          top: 30%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }              
+      &__image {    
+          height: 175px;
+          position:relative;
+        img {
+          width: 100%;
+          position: absolute;          
+          object-fit: cover;                  
+        }
+        &--position1 {top:-50px;}
+        &--position2 {top:-150px;}                     
        }
       &__button {@include card-button;}
         .card-body  {
-            height: 80px;
-            margin: -25px auto 0;
-            padding: 10px;
+            position:absolute;
+            width: 100%;
+            height: 80px;            
             display: flex;
-            justify-content: space-between;          
+            justify-content: space-between;
+            background-color: #fff;                               
           }
          .card-text {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          padding: 10px 20px;
         } 
       &__title {@include font-card-title--bold;}
       &__location {@include font-card-description;margin-top:3px;}
-      &__icon {margin: 20px 10px;}
+      &__icon {margin: 30px 20px 0 0;
+      
+     }
     }
-
+    
     .footer {
       width: 100%;
       height: 210px;
@@ -87,7 +94,8 @@ les mises en page de grande taille ou un footer*/
       height:300px;
       position: relative;
       overflow: hidden;  
-        img {width: 100%;}
+        img {width: 100%;position:absolute;}
+        .card__image--position2 {top:-95px;}
     }
     
     .restaurant-title {
@@ -101,8 +109,10 @@ les mises en page de grande taille ou un footer*/
       top:200px;
       font-family: $font-title;
       padding: 0 30px;
-      border-radius: 25px 25px 0 0;  
+      border-radius: 25px 25px 0 0;
+      & i {top: 50%; left:50%; transform: translate(-50%,-50%);
     }
+  }
     .starter-container {
       display: flex;
       flex-direction: column;

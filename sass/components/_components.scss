@@ -42,13 +42,12 @@
 }     
   .btn {
     @include button;
-      &:hover {
-        &::after {
-          opacity: 0.2;                    
-        }
+      &:hover{box-shadow: 5px 5px 15px lighten(#000, 40);       
+        &::after {opacity: 0.2;}
       }
       &::after {
-        @include button--after;               
+        @include button--after;
+                        
       }            
     }
 
@@ -66,7 +65,11 @@
       flex-direction: column;
       padding: 20px;
     }
-    & .operation__bloc--light {background: lighten($color: $color-primary, $amount: 30)} 
+    & .operation__bloc--light {
+      background: lighten($color: $color-primary, $amount: 35);
+      i {color: $color-primary};
+     }
+     
     &__bloc {     
       position: relative;
       display: flex;      
