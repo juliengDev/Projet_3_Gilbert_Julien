@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/ac15f4689e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/public/css/style.css">
   <title>Ohmyfood</title>
 </head>
@@ -64,10 +64,14 @@
           </div>          
           <div class="card-body">
             <div class="card-text">
-            <p class="card__title">La palette du goût</p>
-            <p class="card__location">Ménilmontant</p>            
+             <p class="card__title">La palette du goût</p>
+             <p class="card__location">Ménilmontant</p>                        
             </div>
-            <i class="card__icon fa-regular fa-heart fa-lg"></i>            
+            <span class="icon-wrap">
+              <i class="icon-wrap--hidden fa-regular fa-heart fa-lg"></i>
+              <i class="icon-wrap--hover fa-solid fa-heart fa-lg"></i>
+            </span> 
+                     
           </div>
         </a>        
       </div>

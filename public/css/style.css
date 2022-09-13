@@ -225,7 +225,6 @@ les mises en page de grande taille ou un footer*/
 
 .card {
   min-width: 335px;
-  height: 255px;
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
@@ -266,11 +265,9 @@ les mises en page de grande taille ou un footer*/
   position: absolute;
 }
 .card .card-body {
-  position: absolute;
-  width: 100%;
-  height: 80px;
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  width: 100%;
   background-color: #fff;
 }
 .card .card-text {
@@ -288,8 +285,15 @@ les mises en page de grande taille ou un footer*/
   font-weight: 300;
   margin-top: 3px;
 }
-.card__icon {
-  margin: 30px 20px 0 0;
+.card .icon-wrap {
+  display: block;
+  border: 2px solid red;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+.card .icon-wrap--hover {
+  visibility: hidden;
 }
 
 .footer {
@@ -356,11 +360,6 @@ les mises en page de grande taille ou un footer*/
   font-family: "Shrikhand", cursive;
   padding: 0 30px;
   border-radius: 25px 25px 0 0;
-}
-.restaurant-title i {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .starter-container {

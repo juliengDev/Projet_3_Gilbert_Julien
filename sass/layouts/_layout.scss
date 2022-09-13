@@ -24,18 +24,18 @@ les mises en page de grande taille ou un footer*/
 
 .card {
     min-width: 335px;
-    height: 255px;    
     margin: 0 auto;
     background-color: #fff;
     box-shadow: $cd-btn-shadow;
     border-radius: 15px;
     position: relative;
-    overflow: hidden;    
+    overflow: hidden;      
     
       & a {text-decoration:none;color: #333;}    
       &__image {    
           height: 175px;
           position:relative;
+          
         img {
           width: 100%;
           position: absolute;          
@@ -44,13 +44,11 @@ les mises en page de grande taille ou un footer*/
         &--position1 {top:-50px;}
         &--position2 {top:-150px;}                     
        }
-      &__button {@include card-button;}
+      &__button {@include card-button;position: absolute;}
         .card-body  {
-            position:absolute;
+            position:relative;
+            display:flex;
             width: 100%;
-            height: 80px;            
-            display: flex;
-            justify-content: space-between;
             background-color: #fff;                               
           }
          .card-text {
@@ -61,9 +59,16 @@ les mises en page de grande taille ou un footer*/
         } 
       &__title {@include font-card-title--bold;}
       &__location {@include font-card-description;margin-top:3px;}
-      &__icon {margin: 30px 20px 0 0;
+      .icon-wrap {
+        display:  block;
+        border: 2px solid red;
+        position: absolute;
+        top:15px;
+        right: 25px;
+          
+          &--hover {visibility: hidden;}       
+      }
       
-     }
     }
     
     .footer {
@@ -110,9 +115,9 @@ les mises en page de grande taille ou un footer*/
       font-family: $font-title;
       padding: 0 30px;
       border-radius: 25px 25px 0 0;
-      & i {top: 50%; left:50%; transform: translate(-50%,-50%);
+      
     }
-  }
+  
     .starter-container {
       display: flex;
       flex-direction: column;
