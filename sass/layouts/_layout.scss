@@ -3,8 +3,7 @@ les mises en page de grande taille ou un footer*/
 
 /* Main page */
 .header-page {
-  width: 100%;
-  
+  width: 100%;  
   display: flex;
   justify-content: center;
   align-items: center;    
@@ -19,6 +18,7 @@ les mises en page de grande taille ou un footer*/
       }   
       &__logo {      
           width: 50%;
+          
       }
     }
 
@@ -29,7 +29,8 @@ les mises en page de grande taille ou un footer*/
     box-shadow: $cd-btn-shadow;
     border-radius: 15px;
     position: relative;
-    overflow: hidden;      
+    overflow: hidden;
+    z-index: 1;      
     
       & a {text-decoration:none;color: #333;}    
       &__image {    
@@ -60,15 +61,13 @@ les mises en page de grande taille ou un footer*/
       &__title {@include font-card-title--bold;}
       &__location {@include font-card-description;margin-top:3px;}
       .icon-wrap {
-        display:  block;
-        border: 2px solid red;
-        position: absolute;
-        top:15px;
-        right: 25px;
-          
-          &--hover {visibility: hidden;}       
+        width: 25px;
+        height: 20px;        
+        position: absolute;       
+        top: 30px;
+        right: 40px;
+        transform:scale(1.3);
       }
-      
     }
     
     .footer {
@@ -94,6 +93,18 @@ les mises en page de grande taille ou un footer*/
     
     /* Restaurant Page*/
 
+    @keyframes slidedown  {
+      0% {
+        transform: translateY(150px);
+        opacity:0;
+      }
+      
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
     .image-container {
       width: 100%;
       height:300px;
@@ -118,7 +129,7 @@ les mises en page de grande taille ou un footer*/
       
     }
   
-    .starter-container {
+    .starter-container {      
       display: flex;
       flex-direction: column;
       height: 300px; 
@@ -137,7 +148,8 @@ les mises en page de grande taille ou un footer*/
     .starter-container--extend {height:370px;}
       
         
-  .dishes-card {    
+  .dishes-card {
+    animation: slidedown 1500ms ease-out 100ms;    
     height: 60px;
     background-color: #fff;
     border-radius: 15px;
