@@ -1,0 +1,98 @@
+@keyframes slidedown  {
+  0% {
+    transform: translateY(30px);
+    opacity:0;
+  }    
+  80%, 100% {opacity: 0.6}
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}   
+
+@keyframes spin-check {
+  from {
+    transform: rotate(-270deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+
+.dishes-card {
+  width:300px;
+  display: flex;    
+  height: 60px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  margin:10px 0;
+  overflow: hidden;
+      &--anim1  {animation: slidedown 1000ms  linear 100ms forwards;}
+      &--anim2  {animation: slidedown 1000ms  linear 200ms forwards;}
+      &--anim3  {animation: slidedown 1000ms  linear 300ms forwards;}      
+      &--extend {height: 80px;}
+     &__text {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 5px 10px;
+      text-overflow : ellipsis;
+      white-space: nowrap;
+      overflow : hidden;
+      & p {      
+        text-overflow : ellipsis;
+        white-space: nowrap;
+        overflow : hidden;
+        padding:2px 0;
+        &:first-child {@include font-card-title--bold;}
+        &:last-child {@include font-card-description;font-size: 0.9rem;}
+      } 
+     }
+     &__price {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;  
+      @include font-menu-price;
+      padding:  10px 20px;
+      margin-left:auto;
+      
+     }
+     &__animation {
+      display:grid;
+      place-items: center;  
+      height: 60px;
+      width:4rem;
+      background-color: #99E2D0;
+      border-radius: 0 15px 15px 0;  
+      margin-right:-4rem;
+      transition: margin-right 400ms;
+      
+     }  
+      &:hover .dishes-card__animation {
+      margin:0;
+    }
+      &:hover .circle-animation  {
+      animation: spin-check 500ms;
+    }     
+}
+
+.circle-animation{
+  position: relative;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.circle-animation i {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:#99E2D0;
+  font-weight: bold;  
+}
+
+

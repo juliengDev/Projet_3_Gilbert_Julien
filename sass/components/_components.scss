@@ -1,8 +1,18 @@
 /* utilise pour ranger les blocs BEM qui sont independants, comme les boutons*/
+/*
 @keyframes loader {
   0% {opacity: 1;z-index: 2;}
   80%,100% {opacity:1;z-index: 2;}
   100% {opacity: 0;z-index: 1;}
+}
+@keyframes  scale-up  {
+  0% {transform: translate(-50%, -50%) scale(0)}
+  60%,100% {transform:translate(-50%, -50%) scale(1)}
+}
+
+@keyframes pulse {
+  0%, 60%, 100% {transform: scale(1)}
+  80% {transform: scale(1.2)}
 }
 
 .loader-container {
@@ -21,8 +31,7 @@
 }
 
 
-.loader {
-  
+.loader {  
 width: 48px;
 height: 48px;
 border: 5px solid $color-primary;
@@ -52,16 +61,7 @@ animation: pulse 1000ms linear infinite;
   transform: translate(-50%, -50%);
   animation: scale-up 1000ms linear infinite;
 }
-@keyframes  scale-up  {
-  0% {transform: translate(-50%, -50%) scale(0)}
-  60%,100% {transform:translate(-50%, -50%) scale(1)}
-}
-
-@keyframes pulse {
-  0%, 60%, 100% {transform: scale(1)}
-  80% {transform: scale(1.2)}
-}
-
+*/
 .header {
   display: flex;
   justify-content: center;
@@ -121,7 +121,7 @@ animation: pulse 1000ms linear infinite;
     }
 
 .operation {
-  /*border: 2px solid blue;*/
+  
   height: 445px;
   background-color: #fff;
     &__title {

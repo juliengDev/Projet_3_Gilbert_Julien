@@ -12,7 +12,7 @@
 
 @mixin font-card-title--bold {
   font-family: $font-text;
-  font-weight: 600;
+  font-weight: 500;
 }
 @mixin font-card-description {
   font-family: $font-text;
@@ -56,7 +56,7 @@
   font-size: 1rem;
   font-family: $font-text;
   text-align: center;
-  background: linear-gradient(to top, lighten($color-primary, 50) 0%, lighten($color-secondary, 50) 100%);
+  background: linear-gradient(to top, $color-primary, $color-secondary);
   color: $cd-btn-color;    
   border-radius: 10rem;
   border: none;  
