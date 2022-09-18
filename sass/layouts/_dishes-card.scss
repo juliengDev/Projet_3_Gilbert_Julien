@@ -31,7 +31,8 @@
   overflow: hidden;
       &--anim1  {animation: slidedown 1000ms  linear 100ms forwards;}
       &--anim2  {animation: slidedown 1000ms  linear 200ms forwards;}
-      &--anim3  {animation: slidedown 1000ms  linear 300ms forwards;}      
+      &--anim3  {animation: slidedown 1000ms  linear 300ms forwards;}
+      &--anim4  {animation: slidedown 1000ms  linear 400ms forwards;}       
       &--extend {height: 80px;}
      &__text {
       display:flex;

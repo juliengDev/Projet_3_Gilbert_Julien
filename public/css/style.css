@@ -430,6 +430,9 @@ animation: pulse 1000ms linear infinite;
 .dishes-card--anim3 {
   animation: slidedown 1000ms linear 300ms forwards;
 }
+.dishes-card--anim4 {
+  animation: slidedown 1000ms linear 400ms forwards;
+}
 .dishes-card--extend {
   height: 80px;
 }
