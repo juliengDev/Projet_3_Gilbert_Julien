@@ -1,7 +1,9 @@
 .btn {
   @include button;
-    &:hover{box-shadow: 5px 5px 15px lighten(#000, 40);       
-      &::after {opacity: 0.2;}
+    &:hover{
+      box-shadow: 5px 5px 15px lighten(#000, 40); 
+      transform: scale(1.05);  
+        &::after {opacity: 0.2;}
     }
     &::after {
       @include button--after;

@@ -64,14 +64,9 @@ a {
   flex-direction: column;
   padding: 20px;
 }
-.operation .operation__bloc--light {
-  background: #f2eafb;
-}
-.operation .operation__bloc--light i {
-  color: #9356DC;
-}
 .operation__bloc {
   position: relative;
+  cursor: pointer;
   display: flex;
   align-items: center;
   height: 75px;
@@ -79,6 +74,14 @@ a {
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   margin: 0.625rem;
+  transition: transform 200ms ease-in-out;
+}
+.operation__bloc:hover {
+  background: #f2eafb;
+  transform: scale(1.02);
+}
+.operation__bloc:hover i {
+  color: #9356DC;
 }
 .operation__bloc > div {
   position: absolute;
@@ -140,6 +143,7 @@ a {
 }
 .btn:hover {
   box-shadow: 5px 5px 15px #666666;
+  transform: scale(1.05);
 }
 .btn:hover::after {
   opacity: 0.2;
@@ -348,6 +352,11 @@ animation: pulse 1000ms linear infinite;
   top: 25px;
   font-size: 1.4em;
   color: #000;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+}
+.header-page__icon:hover {
+  transform: scale(1.4);
 }
 .header-page__logo {
   width: 50%;
@@ -526,6 +535,7 @@ animation: pulse 1000ms linear infinite;
   top: -150px;
 }
 .card__button {
+  cursor: pointer;
   background-color: #99E2D0;
   color: #028766;
   border: #99E2D0;
@@ -536,7 +546,12 @@ animation: pulse 1000ms linear infinite;
   padding: 8px 16px;
   top: 10px;
   right: 10px;
+  transition: transform 200ms ease-in-out;
+  transform: scale(1);
   position: absolute;
+}
+.card__button:hover {
+  transform: scale(1.05);
 }
 .card .card-body {
   position: relative;

@@ -36,20 +36,25 @@
       flex-direction: column;
       padding: 20px;
     }
-    & .operation__bloc--light {
-      background: lighten($color: $color-primary, $amount: 35);
-      i {color: $color-primary};
-     }
+   
      
     &__bloc {     
       position: relative;
+      cursor: pointer;
       display: flex;      
       align-items: center;
       height: 75px;
       background-color: $color-bg;
       box-shadow: $cd-btn-shadow;
       border-radius: 25px;
-      margin: 0.625rem;    
+      margin: 0.625rem;
+      transition: transform 200ms ease-in-out;
+        &:hover {
+          background: lighten($color: $color-primary, $amount: 35);
+          transform: scale(1.02);
+          i {color: $color-primary};
+        }
+            
         > div {
         position: absolute;
         left: -10px;
