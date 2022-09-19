@@ -72,17 +72,7 @@
     }
   }
 
-  .restaurant {
-    height: 1225px;
-    background-color: #EAEAEA;
-      &__cards {
-        display: grid;
-        grid-template: repeat(4, 1fr) / 1fr;         
-        grid-auto-flow: column;
-        grid-gap: 20px;
-      }
-      > p {@include font-xl; padding: 30px 30px;}
-  }
+
 
   
   

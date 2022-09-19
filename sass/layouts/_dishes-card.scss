@@ -21,13 +21,14 @@
 
 
 .dishes-card {
-  width:300px;
+  
   display: flex;    
   height: 60px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
   margin:10px 0;
+  cursor: pointer;
   overflow: hidden;
       &--anim1  {animation: slidedown 1000ms  linear 100ms forwards;}
       &--anim2  {animation: slidedown 1000ms  linear 200ms forwards;}
@@ -67,6 +68,7 @@
       border-radius: 0 15px 15px 0;  
       margin-right:-4rem;
       transition: margin-right 400ms;
+        &--extend {height: 100%;}
       
      }  
       &:hover .dishes-card__animation {

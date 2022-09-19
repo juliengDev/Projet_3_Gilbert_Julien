@@ -7,14 +7,15 @@
   color: #fff;
     &__logo  {
       filter: invert(96%) sepia(0%) saturate(7468%) hue-rotate(120deg) brightness(104%) contrast(98%);
-      width: 30%;                
-    }
-    ul {margin-top: 15px;display: flex; flex-direction: column; justify-content: center;}
-    li {list-style-type: none;font-size: 0.9rem;margin: 5px 0;font-size: 0.8rem;font-weight: 300;}         
+      width: 100px;
+      margin-bottom: 15px;                
+    }            
     &__bloc {          
       display: flex;
       align-items: center;
-      .margin {margin-left: 5px;}
-      li {margin-left: 5px;font-weight: 400;}                
-  }
+      margin: 5px 0;
+      & i  {padding-right: 10px;}
+      & .icon-position {padding-right: 15px;}                      
+    }
+    &__link {display:inline-block;margin: 3px 0;}
 }
