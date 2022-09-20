@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  height: 210px;
+  background-color: #363636;
+  padding: 30px;
+  font-family: $font-text;
+  color: #fff;
+    &__logo  {
+      filter: invert(96%) sepia(0%) saturate(7468%) hue-rotate(120deg) brightness(104%) contrast(98%);
+      width: 100px;
+      margin-bottom: 15px;                
+    }            
+    &__bloc {          
+      display: flex;
+      align-items: center;
+      margin: 5px 0;
+      & i  {padding-right: 10px;}
+      & .icon-position {padding-right: 15px;}                      
+    }
+    &__link {display:inline-block;margin: 3px 0;}
+}

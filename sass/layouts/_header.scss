@@ -1,0 +1,55 @@
+/* Header Main page */
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+      height: 75px;
+      background-color: white;   
+          &__logo {      
+              width: 220px;
+              &-titre {
+                width: 50%;
+                font-family: $font-logo;
+                font-size: 3rem;
+                margin: 0 10px;
+                color: $color-primary;}     
+        }
+     }
+    
+    .header__locate {  
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      background-color: #EAEAEA;
+      border-top: 8px solid $color-bg;
+      border-image: $border-shadow;
+        &__icon {margin: 0 10px;}
+        &__city {font-family: $font-text;}
+    }    
+
+/* Header Restaurant */
+
+    .header-page {
+      width: 100%;  
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+      height: 75px;
+      background-color: white;
+          &__icon {
+            position: absolute;
+            left: 30px;
+            top: 25px;
+            font-size: 1.4em;
+            color: #000;
+            transform: scale(1);
+            transition: transform 200ms ease-in-out;
+              &:hover {transform: scale(1.4);}        
+          }   
+          &__logo {      
+              width: 220px;;
+              
+          }
+        }

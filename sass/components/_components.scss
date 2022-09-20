@@ -1,61 +1,89 @@
 /* utilise pour ranger les blocs BEM qui sont independants, comme les boutons*/
 
-.header__locate {  
-  height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  background-color: $color-bg;
-  border-top: 8px solid $color-bg;
-  border-image: $border-shadow;
-    &__icon {margin: 0 10px;}
-    &__city {font-family: $font-text;}
-}
-
 .reservation {
-  background-color: #fff;
-  height:285px;
+  background-color: $color-bg;
+  height:300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: $font-text;
     &__title {
       @include font-xl; 
-      margin-top: 50px;
+      margin-top: 40px;
     & p:nth-child(2){text-align: center;}
   }    
     &__description {
       @include font-normal;
-      margin-top: 10px;
+      margin-top: 15px;
       & p:nth-child(2) {text-align:center;}
     }
-}
-     
-  .btn {
-    @include button;
-      &:hover { 
-            transform: scale(1.1);                       
-    }  
-}
+}     
+  
 
-.operation {
-  /*border: 2px solid blue;*/
-  height: 445px;
+.operation {  
   background-color: #fff;
     &__title {
       @include font-xl;
-      padding: 40px 30px;
+      padding: 50px 30px 0;
+      
     }
     &__container {      
       display: flex;
       flex-direction: column;
       padding: 20px;
+      margin-bottom: 30px;
+      @media screen and (min-width: 768px)
+      {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
     }
+   
+     
     &__bloc {     
+      position: relative;
+      cursor: pointer;
       display: flex;      
       align-items: center;
       height: 75px;
       background-color: $color-bg;
-      margin: 10px;
+      box-shadow: $cd-btn-shadow;
+      border-radius: 25px;
+      margin: 0.625rem;
+      transition: transform 200ms ease-in-out;
+        &:hover {
+          background: lighten($color: $color-primary, $amount: 35);
+          transform: scale(1.02);
+          i {color: $color-primary};
+        }
+            
+        > div {
+        position: absolute;
+        left: -10px;
+        line-height: 20px;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        color: #fff;
+        background-color: $color-primary;
+        border-radius: 25px;
+        font-size: 0.8rem;
+                     
+       }
+        > i {margin-left: 2.187rem;color: grey}
+        > p {
+          margin-left: 1.875rem;
+          font-family: $font-text;
+          font-weight: 500;
+          margin-right: 20px;
+          
+        }        
     }
   }
+
+
+
+  
+  
+  

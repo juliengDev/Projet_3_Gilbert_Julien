@@ -3,8 +3,14 @@
 @import "./utils/mixins";
 @import "./utils/extensions";
 @import "./base/base";
+@import "./components/loader";
 @import "./components/components";
+@import "./components/btn";
 @import "./layouts/layout";
-@import "./pages/page1";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/dishes-card";
+@import "./layouts/restaurants-card";
+
 
 
