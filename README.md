@@ -1,4 +1,4 @@
-# Site Ohmyfood - Projet 3 Openclassrooms
+# Projet 3 Openclassrooms - Site Ohmyfood
 
 
 <div align="center"> 
