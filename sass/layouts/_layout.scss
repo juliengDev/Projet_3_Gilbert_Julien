@@ -2,19 +2,17 @@
 les mises en page de grande taille ou un footer*/
 
    /* Restaurant Page*/
-
-    
-
-    .image-container {
+   .menu {background-color: $color-bg; padding:0 30px;}
+   .image-container {
       width: 100%;
       height:300px;
       position: relative;
-      overflow: hidden;  
+      overflow: hidden;
         img {width: 100%;position:absolute;}
         .card__image--position2 {top:-95px;}
         .card__image--position3 {top:-50px;}
     }
-    
+
     .restaurant-title {
       display: flex;
       justify-content: space-between;
@@ -30,21 +28,30 @@ les mises en page de grande taille ou un footer*/
       
     }
   
-    .starter-container {      
-      display: flex;
-      flex-direction: column;
-      height: 300px; 
+    .menu-title h2 {
+      @include font-menu-title;
       background-color: $color-bg;
-      padding: 0 30px;      
-      & .menu-title h2 {@include font-menu-title;}
-      & .menu-title h2::after {
+      
+    }
+    .menu-title h2::after {
       content: "";      
       display: block;
       width: 30px;
       height: 2px;
       margin-top: 2px;
-      background-color: $color-tertiary; 
-  }
+      background-color: $color-tertiary;        
+   }
+    .menu-container {      
+      display: flex;
+      flex-direction: column;       
+      background-color: $color-bg;
+      padding: 10px 0;      
+        @media screen and (min-width: 768px){
+        display: grid;
+        grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+        gap: 10px;        
+        height: auto;    
+  } 
 }
     .starter-container--extend {height:370px;}
       

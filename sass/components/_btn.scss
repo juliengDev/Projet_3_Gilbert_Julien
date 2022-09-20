@@ -1,14 +1,12 @@
 .btn {
   @include button;
     &:hover{
-      box-shadow: 5px 5px 15px lighten(#000, 40); 
-      transform: scale(1.05);  
-        &::after {opacity: 0.2;}
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6); 
+      transform: scale(1.05);
+      opacity: 0.9;  
+      
     }
-    &::after {
-      @include button--after;
-                      
-    }            
+             
   }
 
   .btn-container {
@@ -17,5 +15,5 @@
     background-color: $color-bg;
     display: flex;
     justify-content: center;
-      & .btn {width:55%; margin-top: 0;};
+      & .btn {width:250px; margin-top: 50px;};
   }

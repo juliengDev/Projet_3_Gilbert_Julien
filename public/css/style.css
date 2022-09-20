@@ -11,7 +11,6 @@ sur tout votre site, telles que le box-sizing*/
 }
 
 body {
-  background-color: #333;
   font-size: 16px;
 }
 
@@ -22,11 +21,11 @@ a {
 
 @keyframes loader {
   0% {
-    opacity: 0.9;
+    opacity: 0.98;
     z-index: 2;
   }
   80%, 100% {
-    opacity: 0.5;
+    opacity: 0.9;
     z-index: 2;
   }
   100% {
@@ -34,20 +33,20 @@ a {
     z-index: -2;
   }
 }
-@keyframes scale-up {
+@keyframes rotation {
   0% {
-    transform: translate(-50%, -50%) scale(0);
+    transform: rotate(0deg);
   }
-  60%, 100% {
-    transform: translate(-50%, -50%) scale(1);
+  100% {
+    transform: rotate(360deg);
   }
 }
-@keyframes pulse {
-  0%, 60%, 100% {
-    transform: scale(1);
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
   }
-  80% {
-    transform: scale(1.2);
+  100% {
+    transform: rotate(-360deg);
   }
 }
 .loader-container {
@@ -67,32 +66,45 @@ a {
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #9356DC;
   border-radius: 50%;
-  box-sizing: border-box;
   display: inline-block;
   position: relative;
-  top: -20px;
-  animation: pulse 1000ms linear infinite;
+  border: 3px solid;
+  border-color: #9356DC #9356DC transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
+
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #FF79DA #FF79DA;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #99E2D0 #99E2D0 transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
 .loader-center {
   display: flex;
   justify-content: center;
-}
-
-.loader:after {
-  content: "";
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  border: 5px solid #9356DC;
-  border-radius: 50%;
-  box-sizing: border-box;
-  display: inline-block;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: scale-up 1000ms linear infinite;
 }
 
 /* utilise pour ranger les blocs BEM qui sont independants, comme les boutons*/
@@ -124,7 +136,6 @@ a {
 }
 
 .operation {
-  height: 445px;
   background-color: #fff;
 }
 .operation__title {
@@ -137,6 +148,14 @@ a {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .operation__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .operation__bloc {
   position: relative;
@@ -145,7 +164,7 @@ a {
   align-items: center;
   height: 75px;
   background-color: #f6f6f6;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
   border-radius: 25px;
   margin: 0.625rem;
   transition: transform 200ms ease-in-out;
@@ -177,6 +196,7 @@ a {
   margin-left: 1.875rem;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  margin-right: 20px;
 }
 
 .btn {
@@ -188,7 +208,7 @@ a {
   text-align: center;
   background: linear-gradient(to top, #9356DC 0%, #FF79DA 100%);
   color: #fff;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
   border-radius: 10rem;
   border: none;
   cursor: pointer;
@@ -199,32 +219,9 @@ a {
   opacity: 1;
 }
 .btn:hover {
-  box-shadow: 5px 5px 15px #666666;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
   transform: scale(1.05);
-}
-.btn:hover::after {
-  opacity: 0.2;
-}
-.btn::after {
-  width: 250px;
-  height: 55px;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  color: #fff;
-  border-radius: 10rem;
-  border: none;
-  cursor: pointer;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: all 250ms;
-  opacity: 0;
+  opacity: 0.9;
 }
 
 .btn-container {
@@ -235,13 +232,18 @@ a {
   justify-content: center;
 }
 .btn-container .btn {
-  width: 55%;
-  margin-top: 0;
+  width: 250px;
+  margin-top: 50px;
 }
 
 /* dossier contenant ce qui est reutilisable, par exemple un header pour 
 les mises en page de grande taille ou un footer*/
 /* Restaurant Page*/
+.menu {
+  background-color: #f6f6f6;
+  padding: 0 30px;
+}
+
 .image-container {
   width: 100%;
   height: 300px;
@@ -273,26 +275,36 @@ les mises en page de grande taille ou un footer*/
   border-radius: 25px 25px 0 0;
 }
 
-.starter-container {
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  background-color: #f6f6f6;
-  padding: 0 30px;
-}
-.starter-container .menu-title h2 {
+.menu-title h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 0.8rem;
+  background-color: #f6f6f6;
 }
-.starter-container .menu-title h2::after {
+
+.menu-title h2::after {
   content: "";
   display: block;
   width: 30px;
   height: 2px;
   margin-top: 2px;
   background-color: #99E2D0;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  padding: 10px 0;
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: grid;
+    grid-template: repeat(1, 1fr)/repeat(3, 1fr);
+    gap: 10px;
+    height: auto;
+  }
 }
 
 .starter-container--extend {
@@ -421,12 +433,15 @@ les mises en page de grande taille ou un footer*/
 }
 .dishes-card--anim1 {
   animation: slidedown 1000ms linear 100ms forwards;
+  grid-row-start: 1;
 }
 .dishes-card--anim2 {
   animation: slidedown 1000ms linear 200ms forwards;
+  grid-row-start: 1;
 }
 .dishes-card--anim3 {
   animation: slidedown 1000ms linear 300ms forwards;
+  grid-row-start: 1;
 }
 .dishes-card--anim4 {
   animation: slidedown 1000ms linear 400ms forwards;
@@ -528,7 +543,7 @@ les mises en page de grande taille ou un footer*/
   min-width: 335px;
   margin: 0 auto;
   background-color: #fff;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   position: relative;
   overflow: hidden;

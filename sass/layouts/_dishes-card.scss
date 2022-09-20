@@ -20,8 +20,7 @@
 }
 
 
-.dishes-card {
-  
+.dishes-card {  
   display: flex;    
   height: 60px;
   background-color: #fff;
@@ -30,9 +29,9 @@
   margin:10px 0;
   cursor: pointer;
   overflow: hidden;
-      &--anim1  {animation: slidedown 1000ms  linear 100ms forwards;}
-      &--anim2  {animation: slidedown 1000ms  linear 200ms forwards;}
-      &--anim3  {animation: slidedown 1000ms  linear 300ms forwards;}
+      &--anim1  {animation: slidedown 1000ms  linear 100ms forwards; grid-row-start: 1;}
+      &--anim2  {animation: slidedown 1000ms  linear 200ms forwards;grid-row-start: 1}
+      &--anim3  {animation: slidedown 1000ms  linear 300ms forwards;grid-row-start: 1}
       &--anim4  {animation: slidedown 1000ms  linear 400ms forwards;}       
       &--extend {height: 80px;}
      &__text {
