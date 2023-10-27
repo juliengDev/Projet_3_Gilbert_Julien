@@ -158,16 +158,21 @@ a {
   }
 }
 .operation__bloc {
+  max-width: 33.333%;
+  flex: 1;
   position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
-  height: 75px;
+  min-height: 75px;
   background-color: #f6f6f6;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
   border-radius: 25px;
   margin: 0.625rem;
   transition: transform 200ms ease-in-out;
+}
+.operation__bloc:not(:last-child) {
+  margin-right: 3rem;
 }
 .operation__bloc:hover {
   background: #f2eafb;
